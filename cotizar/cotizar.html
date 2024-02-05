@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mexar Cleaning & Sanitation Cotization</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="headernav">
+        <img src="../assets/logo_sf2.png" alt="Logo de Mexar" />
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Quote Request</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    <div id="form-cotizacion">
+        <div class="upper-form">
+            <div class="left-upper-form ">
+                <div>
+                    <h3>Type of cleaning required</h3>
+                    <label>
+                        <input type="radio" name="cleaningType" value="One-time"> One-time
+                    </label>
+                    <label>
+                        <input type="radio" name="cleaningType" value="RegularMaintenance"> Regular Maintenance
+                    </label>
+                    <label>
+                        <input type="radio" name="cleaningType" value="MoveInOut"> Move in | Move out
+                    </label>
+                    <label>
+                        <input type="radio" name="cleaningType" value="VacationRental"> Vacation Rental
+                    </label>
+                    <label>
+                        <input type="radio" name="cleaningType" value="PostContinuation"> Post Continuation
+                    </label>
+                    <label>
+                        <input type="radio" name="cleaningType" value="DeepCleaning"> Deep cleaning
+                    </label>
+                </div>
+                <div>
+                    <h3>Regular clean frequency</h3>
+                    <label>
+                        <input type="radio" name="cleanFrequency" value="OnlyOnce"> Only once
+                    </label>
+                    <label>
+                        <input type="radio" name="cleanFrequency" value="Weekly"> Weekly
+                    </label>
+                    <label>
+                        <input type="radio" name="cleanFrequency" value="BiWeekly"> Bi-weekly
+                    </label>
+                    <label>
+                        <input type="radio" name="cleanFrequency" value="Every3Weeks"> Every 3 weeks
+                    </label>
+                    <label>
+                        <input type="radio" name="cleanFrequency" value="Every5Weeks"> Every 5 weeks
+                    </label>
+                    <label>
+                        <input type="radio" name="cleanFrequency" value="ToBeDefined"> To be defined
+                    </label>
+                </div>
+            </div>
+            <div class="right-upper-form">
+                <h3>Type of cleaning place</h3>
+                <div class="inner-right-upper-form">
+                    <div>
+                        <label>
+                            <input type="radio" name="cleaningPlace" value="Houses"> Houses
+                        </label>
+                        <label>
+                            <input type="radio" name="cleaningPlace" value="Condominiums"> Condominiums
+                        </label>
+                        <label>
+                            <input type="radio" name="cleaningPlace" value="Townhouses"> Townhouses
+                        </label>
+                        <label>
+                            <input type="radio" name="cleaningPlace" value="Apartments"> Apartments
+                        </label>
+                    </div>
+                    
+                    <div>
+                        <label>
+                            <input type="radio" name="cleaningPlace" value="Schools"> Schools
+                        </label>
+                        <label>
+                            <input type="radio" name="cleaningPlace" value="DayCare"> Day Care
+                        </label>
+                        <label>
+                            <input type="radio" name="cleaningPlace" value="Churches"> Churches
+                        </label>
+                        <label>
+                            <input type="radio" name="cleaningPlace" value="ConstructionSites"> Construction sites
+                        </label>
+                        <label>
+                            <input type="radio" name="cleaningPlace" value="SiteOffices"> Site offices
+                        </label>
+                        <label>
+                            <input type="radio" name="cleaningPlace" value="Warehouses"> Warehouses
+                        </label>
+                        <label>
+                            <input type="radio" name="cleaningPlace" value="Offices"> Offices
+                        </label>
+                        <label>
+                            <input type="radio" name="cleaningPlace" value="Buildings"> Buildings
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lower-form">
+            <div class="left-lower-form">
+                <h3>What type of service are you requiring</h3>
+               <div>
+                <div>
+                    <label>
+                        <input type="radio" name="serviceType" value="WindowCleaning"> Window cleaning
+                    </label>
+                    <label>
+                        <input type="radio" name="serviceType" value="PressureWasher"> Pressure washer
+                    </label>
+                    <label>
+                        <input type="radio" name="serviceType" value="CarpetCleaning"> Carpet cleaning
+                    </label>
+                    <label>
+                        <input type="radio" name="serviceType" value="FloorCare"> Floor care
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="serviceType" value="MaidServices"> Maid services
+                    </label>
+                    <label>
+                        <input type="radio" name="serviceType" value="SnowRemoval"> Snow removal
+                    </label>
+                    <label>
+                        <input type="radio" name="serviceType" value="Sanitations"> Sanitations
+                    </label>
+                    <label>
+                        <input type="radio" name="serviceType" value="Other"> Other
+                    </label>
+                </div>
+               </div>
+            </div>
+            <div class="right-lower-form">
+                <h3>First name and email</h3>
+                <div>
+                    <div>
+                        <p>Contact name:</p>
+                        <p>Tel. Optional</p>
+                    </div>
+                    <div>
+                        <input type="text" id="contactName" name="contactName" placeholder="John Smith">
+                        <input type="tel" id="tel" name="tel" placeholder="403 7795">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <p>Email:</p>
+                        <p>Zip code:</p>
+                    </div>
+                    <div>
+                        <input type="email" id="email" name="email" placeholder="John@example.com">
+                        <input type="text" id="zipCode" name="zipCode" placeholder="T2A 0A1">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="goAhead">
+        <button>Go ahead!</button>
+
+        </div>
+    </div>
+</body>
+</html>

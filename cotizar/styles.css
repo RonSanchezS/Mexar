@@ -1,0 +1,156 @@
+:root {
+  --main-color: #0c3223;
+  --secondary-color: #94e4c4;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  transition: all 0.2s ease-in-out;
+  padding: 0px 48px;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+  width: calc(100vw - 96px);
+  background-color: #0c3223;
+  img {
+    height: calc(100% - 16px);
+    width: auto;
+    padding-top: 8px;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    li {
+      text-transform: uppercase;
+      list-style-type: none;
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 12px;
+        font-family: "Maven Pro", sans-serif;
+        transition: color 0.2s ease-in-out;
+        &:hover {
+          color: var(--secondary-color);
+        }
+      }
+    }
+  }
+}
+
+#form-cotizacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 72px;
+  height: calc(100vh - 120px);
+  .upper-form {
+    display: flex;
+    gap: 16px;
+    .left-upper-form,
+    .right-upper-form {
+      flex: 1;
+    }
+    .left-upper-form {
+      display: flex;
+      gap: 16px;
+      div {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .right-upper-form {
+      .inner-right-upper-form {
+        display: flex;
+        div{
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+      }
+    }
+  }
+
+  h3{
+    background-color: var(--main-color);
+    color: white;
+    text-align: center;
+    padding: 8px;
+    border-radius: 8px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .bottomBorder{
+    border-bottom: 24px solid var(--main-color);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+
+
+  .lower-form{
+    
+    display: flex;
+    gap: 16px;
+    .left-lower-form, .right-lower-form{
+      flex: 1;
+    }
+    .left-lower-form{
+        display: flex;
+        flex-direction: column;
+        div{
+            display: flex;
+            flex-direction:row;
+            
+            flex: 1;
+            div{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+    .right-lower-form{
+      div{
+        div{
+          *{
+            flex: 1;
+          }
+          display: flex;
+        }
+      }
+    }
+  }
+}
+.goAhead{
+  display: flex;
+  justify-content: center;
+  margin: 26px 0px;   
+  
+  button{
+    max-width: 250px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--main-color);
+    color: white;
+    font-family: "Maven Pro", sans-serif;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-size: 16px;
+    border: #0c3223;
+    &:hover{
+      background-color: white;
+      color: var(--main-color);
+    }
+   }
+}
