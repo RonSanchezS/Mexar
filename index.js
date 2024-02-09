@@ -34,6 +34,7 @@ window.onscroll = function() {
 
 
 function callButtonClick(){
+    numero = "+12506097987";
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         window.open('tel:' + numero);
     } else {
