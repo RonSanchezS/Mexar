@@ -31,3 +31,25 @@ window.onscroll = function() {
 
     lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
 };
+
+
+function callButtonClick(){
+    try {
+        window.open('tel:' + numero);
+    } catch (error) {
+        dialog.showModal();
+        dialog.style.display = "flex";
+        dialog.style.alignItems = "center";
+        dialog.style.justifyContent = "center";
+        dialog.style.flexDirection = "column";
+    }
+}
+
+const dialog = document.querySelector("dialog");
+
+closeButton = document.getElementById("closeButton");
+// "Close" button closes the dialog
+closeButton.addEventListener("click", () => {
+    dialog.style.display = "none";
+  dialog.close();
+});

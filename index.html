@@ -15,6 +15,11 @@
   </head>
 
   <body>
+    <dialog>
+      <button autofocus id="closeButton">Close</button>
+      <p>This modal dialog has a groovy backdrop!</p>
+      <img src="./qrcallme.png" alt="svg">
+    </dialog>
     <img
       src="./assets/Fondo4.jpg"
       id="limpieza"
@@ -67,7 +72,7 @@
         </li>
       </ul>
       <div>
-        <button>Call 250.609.7987</button>
+        <button onclick="callButtonClick()">Call 250.609.7987</button>
       </div>
     </section>
     <section id="callnow" class="fullHeight">
@@ -152,12 +157,19 @@ Regular Pressure washing maintains the life of your floors.
         <div>
           <h3>Sanitation</h3>
           <p>Our sanitation service eliminates viruses and other biological agents in the air and on any surfaces within the area that's being treated. Widely used in childcare centers, schools, and offices.</p>
-          <img src="./assets/snow.png" alt="Office" />
+          <img src="./assets/sanitation.jpg" alt="Office" />
+        </div>
+        <div class="two-row-span">
+          <img src="./assets/logo_horizontal.png" alt="Mexar" />
+          <div class="invis-two-row">
+            <p class="info">250.609.7987</p>
+            <p class="info">info@mexar.ca</p>
+            <button>Call us today!</button>
+          </div>
+         
         </div>
       </div>
-      <p class="info">250.609.7987</p>
-      <p class="info">info@mexar.ca</p>
-      <button>Call us today!</button>
+      
       <div class="space"></div>
     </section>
 
