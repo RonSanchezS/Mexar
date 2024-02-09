@@ -34,9 +34,9 @@ window.onscroll = function() {
 
 
 function callButtonClick(){
-    try {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         window.open('tel:' + numero);
-    } catch (error) {
+    } else {
         dialog.showModal();
         dialog.style.display = "flex";
         dialog.style.alignItems = "center";
