@@ -102,9 +102,9 @@ h1 {
   filter: blur(3px);
 }
 
-#our-services-h2{
+#our-services-h2 {
   color: var(--main-color);
-  font-family: 'Maven Pro', sans-serif;
+  font-family: "Maven Pro", sans-serif;
   text-align: center;
   margin-bottom: 32px;
 }
@@ -120,7 +120,8 @@ h1 {
   h2 {
     color: white;
   }
-  p, q{
+  p,
+  q {
     font-size: 22px;
     letter-spacing: 1.25px;
   }
@@ -143,7 +144,7 @@ h1 {
     color: var(--main-color);
     font-size: 1.65em;
   }
-  ul{
+  ul {
     padding: 0;
     margin-bottom: 48px;
     li {
@@ -151,7 +152,7 @@ h1 {
       list-style-type: none;
       font-family: "Montserrat", sans-serif;
       font-size: 14px;
-      span{
+      span {
         color: var(--main-color);
       }
     }
@@ -167,7 +168,8 @@ h1 {
       border: none;
       border-radius: 8px;
       color: white;
-      background-color: var(--main-color);      cursor: pointer;
+      background-color: var(--main-color);
+      cursor: pointer;
       transition: all 0.2s ease-in-out;
     }
   }
@@ -216,8 +218,6 @@ q {
   }
 }
 
-
-
 .services {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -226,7 +226,6 @@ q {
   padding: 0 32px;
   width: calc(100% - 64px);
   margin-bottom: 32px;
-
 
   div:last-of-type {
     grid-column: span 2;
@@ -240,31 +239,37 @@ q {
       height: auto;
       filter: none;
     }
-    .invis-two-row{
+    .invis-two-row {
+      cursor: pointer;
       opacity: 0;
       z-index: 1;
       transition: all 0.3s ease-in-out;
       display: flex;
       flex-direction: column;
       background-color: var(--main-color);
-      p{
+      button {
+        z-index: 999;
+      }
+      p {
         position: relative;
         margin: 0;
       }
     }
-    p{
+    p {
       color: black;
     }
-    &:hover{
+    &:hover {
+      cursor: pointer;
       background-color: white;
       img:first-of-type {
         opacity: 0;
       }
-      .invis-two-row{
+      .invis-two-row {
         opacity: 1;
         background-color: white;
-      }	
-      p{
+      }
+
+      p {
         opacity: 1;
       }
     }
@@ -284,13 +289,13 @@ q {
 
     h3 {
       position: absolute;
-      opacity: 1; 
+      opacity: 1;
       z-index: 2;
       transition: opacity 0.4s ease-in-out;
       color: white;
     }
 
-    p{
+    p {
       padding: 16px;
       position: absolute;
       opacity: 0;
@@ -312,20 +317,18 @@ q {
       cursor: pointer;
       img {
         transform: rotateY(180deg);
-        filter:  brightness(0.1);
+        filter: brightness(0.1);
       }
 
       h3 {
-        opacity: 0; 
+        opacity: 0;
       }
-      p{
+      p {
         opacity: 1;
-      
       }
     }
   }
 }
-
 
 #quotes {
   background-color: transparent;
@@ -362,18 +365,46 @@ footer {
   background-color: white;
   display: flex;
   justify-content: center;
-  padding: 64px 128px;
+  padding: 64px 80px;
   gap: 64px;
-  img{
-    width:auto;
+  img {
+    width: auto;
     height: 100px;
   }
-  div{
+  div {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      a {
+        text-decoration: none;
+      }
+    }
   }
-  
+}
+.last-div-footer {
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--main-color);
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 #call-us-final {
   background-color: white;
@@ -381,12 +412,12 @@ footer {
   flex-direction: column;
   align-items: center;
   padding: 64px;
-  .info{
+  .info {
     color: #0c3223;
     font-family: "Maven Pro", sans-serif;
     font-size: 1.5em;
   }
-  button{
+  button {
     font-family: "Montserrat", sans-serif;
     padding: 8px 16px;
     border: none;
@@ -396,7 +427,7 @@ footer {
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     margin-top: 16px;
-   margin-bottom: 32px;
+    margin-bottom: 32px;
   }
 }
 
@@ -408,7 +439,7 @@ footer {
   height: 120px;
 }
 
-button{
+button {
   padding: 24px 32px !important;
   transition: all 0.2s ease-in-out;
   border: none;
@@ -420,37 +451,38 @@ button{
   text-transform: uppercase;
   font-family: "Maven Pro", sans-serif !important;
   width: 200px !important;
-  &:hover{
+  &:hover {
     color: var(--main-color) !important;
     background-color: white !important;
     border: 1px solid var(--main-color) !important;
   }
 }
 
-#callnow{
+#callnow {
   padding: 64px;
 }
 
-@media screen and (max-width : 1024px){
-  .services{
+@media screen and (max-width: 1024px) {
+  .services {
     grid-template-columns: repeat(3, 1fr);
   }
-  #call-us-final{
+  #call-us-final {
     padding: 32px;
   }
 }
 
-@media screen and (max-width : 768px){
-  .services{
+@media screen and (max-width: 768px) {
+  .services {
     grid-template-columns: repeat(2, 1fr);
   }
-  #call-us-final{
+  #call-us-final {
     padding: 16px;
   }
-  h2, ul{
+  h2,
+  ul {
     padding: 0px 32px !important;
   }
-  #limpieza{
+  #limpieza {
     height: 100%;
     width: auto;
     object-fit: cover;
@@ -458,11 +490,36 @@ button{
   }
 }
 
-dialog{
+@media screen and (max-width: 500px) {
+  .services {
+    grid-template-columns: repeat(1, 1fr);
+    div {
+      &:last-of-type {
+        grid-column: span 1;
+      }
+    }
+  }
+}
+
+dialog {
   border-radius: 8px;
   border: none;
   padding: 32px;
-  &::backdrop{
+  gap: 16px;
+  p {
+    margin: 0;
+  }
+  a {
+    font-size: 1.25em;
+    margin: 16px;
+    color: var(--main-color);
+    font-family: "Maven Pro", sans-serif;
+    text-decoration: none;
+  }
+  button {
+    padding: 12px 36px !important;
+  }
+  &::backdrop {
     background-color: #0c3223a2;
   }
 }
