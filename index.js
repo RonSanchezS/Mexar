@@ -11,6 +11,33 @@ const navbar = new IntersectionObserver((entries) => {
         }
     });
 });
+
+const about = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            document.querySelector(".about").classList.add("is-intersecting");
+        } else {
+            document.querySelector(".about").classList.remove("is-intersecting");
+        }
+    });
+});
+
+const services = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            document.querySelector(".services-a").classList.add("is-intersecting");
+        } else {
+            document.querySelector(".services-a").classList.remove("is-intersecting");
+        }
+    });
+});
+
+const servicesElement = document.querySelector("#call-us-final");
+services.observe(servicesElement);
+
+const aboutElement = document.querySelector("#list-more-info");
+about.observe(aboutElement);    
+
 const navbarElement = document.querySelector(".uber_text");
 navbar.observe(navbarElement);
 

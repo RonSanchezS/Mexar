@@ -30,11 +30,10 @@
       <img src="./assets/logo_sf2.png" alt="Logo de Mexar" />
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Quote Request</a></li>
-        <li><a href="#">News</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#more-info" class="about">About</a></li>
+        <li><a href="#call-us-final" class="services-a">Services</a></li>
+        <li><a href="./contact/contact.html">Quote Request</a></li>
+        <li><a href="./contact/contact.html">Contact</a></li>
       </ul>
     </nav>
     <section id="video-inicio">
@@ -54,7 +53,7 @@
         Serving you in the lower mainland Vancouver, BC
       </h2>
       <div class="space"></div>
-      <ul>
+      <ul id="list-more-info">
         <li>
           Our purpose is to keep your facilities clean, healthy, and safe.
         </li>
@@ -170,6 +169,19 @@ Regular Pressure washing maintains the life of your floors.
          
         </div>
       </div>
+      <script>
+      const serviceDivs = document.querySelectorAll('.services > div');
+    
+      serviceDivs.forEach(img => {
+            img.addEventListener('click', () => {
+                img.classList.toggle('active-animation');
+                console.log('Se hizo clic en la imagen');
+            });
+            // img.addEventListener('mouseleave', () => {
+            //     img.classList.remove('active-animation');
+            // });
+        });
+    </script>
       
       <div class="space"></div>
     </section>
@@ -221,13 +233,14 @@ Regular Pressure washing maintains the life of your floors.
             V3B 1Y1
           </p>
         </div>
-        <div>
+        <!-- <div>
           <p>
             Monday to Friday: 8 AM – 4 PM <br />
             Saturday: 8 AM – 12 PM <br />
             Sunday: Closed
           </p>
-        </div>
+        </div> -->
+        
         <div class="last-div-footer">
           <div class="flex-row"> 
             <p>Call us: 250 609 7987</p>
@@ -242,6 +255,10 @@ Regular Pressure washing maintains the life of your floors.
             </span>mexar.cleaning</a>
           </div>
           <p>www.mexar.ca</p>
+        </div>
+        <div>
+          <img src="./assets/ecofriendly.png" alt="Logo de eco-friendly" />
+
         </div>
       </div>
     </footer>
