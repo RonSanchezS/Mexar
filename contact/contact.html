@@ -1,22 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact us</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <nav class="headernav">
-        <img src="../assets/logo_sf2.png" alt="Logo de Mexar" />
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../index.html#more-info" class="about">About</a></li>
-          <li><a href="../index.html#call-us-final" class="services-a">Services</a></li>
-          <li><a href="./contact/contact.html">Quote Request</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11032.33746979668!2d-122.77810447931736!3d49.27099622032772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867f4f885235e5%3A0xcf726cdd1f1453c1!2s2128%20Salisbury%20Ave!5e0!3m2!1ses-419!2sbo!4v1708377072408!5m2!1ses-419!2sbo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</body>
+      <img src="../assets/logo_sf2.png" alt="Logo de Mexar" />
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#more-info" class="about">About</a></li>
+        <li>
+          <a href="../index.html#call-us-final" class="services-a">Services</a>
+        </li>
+        <li><a href="./contact/contact.html">Quote Request</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <dialog>
+      <img src="../qrcallme.png" alt="svg">
+      <p>Feel free to call us and ask all your questions!</p>
+      <a href="mailto:Info@mexar.ca?subject=Quotation about cleaning services&body=Hello, can I get a quotation?">Info@mexar.ca</a>
+      <button autofocus id="closeButton">Close</button>
+    </dialog>
+    <section id="contact-us-section">
+      <div class="contact-us-content">
+        <div>
+          <button onclick="callButtonClick()"><h3>Call us today!</h3></button>
+
+          
+          <a href="mailto:Info@mexar.ca?subject=Quotation about cleaning services&body=Hello, can I get a quotation?">
+            <h3>Maybe an E-Mail</h3>
+          </a>
+
+          <h1>Mexar cleaning & sanitation</h1>
+          <p>
+            Mexar
+          </p>
+          <p>
+            2178 Salisbury Ave
+          </p>
+          <p>
+            Port Coquitlam, BC
+          </p>
+          <p>
+            V3B 1Y1
+          </p>
+        </div>
+        <div>
+          <p>
+            Monday to Friday: 8 AM – 4 PM 
+          </p>
+          <p>
+            Saturday: 8 AM – 12 PM 
+          </p>
+          <p>
+            Sunday: Closed
+          </p>
+        </div>
+      </div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11032.33746979668!2d-122.77810447931736!3d49.27099622032772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867f4f885235e5%3A0xcf726cdd1f1453c1!2s2128%20Salisbury%20Ave!5e0!3m2!1ses-419!2sbo!4v1708377072408!5m2!1ses-419!2sbo"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
+  </body>
+  <script>
+    function callButtonClick(){
+    numero = "+12506097987";
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        window.open('tel:' + numero);
+    } else {
+        dialog.showModal();
+        dialog.style.display = "flex";
+        dialog.style.alignItems = "center";
+        dialog.style.justifyContent = "center";
+        dialog.style.flexDirection = "column";
+    }
+}
+
+const dialog = document.querySelector("dialog");
+
+closeButton = document.getElementById("closeButton");
+// "Close" button closes the dialog
+closeButton.addEventListener("click", () => {
+    dialog.style.display = "none";
+  dialog.close();
+});
+  </script>
 </html>

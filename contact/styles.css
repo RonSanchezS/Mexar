@@ -1,541 +1,131 @@
 :root {
-    --main-color: #0c3223;
-    --secondary-color: #94e4c4;
+  --main-color: #0c3223;
+  --secondary-color: #94e4c4;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+nav {
+  transition: all 0.2s ease-in-out;
+  padding: 0px 48px;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 10;
+  width: calc(100vw - 96px);
+  background-color: var(--main-color);
+  img {
+    height: calc(100% - 16px);
+    width: auto;
+    padding-top: 8px;
   }
-  
-  body {
-    font-family: "Roboto", sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  nav {
-    transition: all 0.2s ease-in-out;
-    padding: 0px 48px;
-    height: 120px;
+  ul {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    position: fixed;
-    z-index: 10;
-    width: calc(100vw - 96px);
-    background-color: var(--main-color);
-    img {
-      height: calc(100% - 16px);
-      width: auto;
-      padding-top: 8px;
-    }
-    ul {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      li {
-        text-transform: uppercase;
-        list-style-type: none;
-        a {
-          text-decoration: none;
-          color: white;
-          font-size: 12px;
-          font-family: "Maven Pro", sans-serif;
-          transition: color 0.2s ease-in-out;
-          &:hover {
-            color: var(--secondary-color);
-          }
+    gap: 24px;
+    li {
+      text-transform: uppercase;
+      list-style-type: none;
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 12px;
+        font-family: "Maven Pro", sans-serif;
+        transition: color 0.2s ease-in-out;
+        &:hover {
+          color: var(--secondary-color);
         }
       }
     }
   }
-  #video-inicio {
-    width: 100%;
-    height: calc(100vh);
-    object-fit: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      z-index: -1;
-      filter: brightness(0.7) contrast(1.2);
+}
+
+#contact-us-section {
+  display: flex;
+  padding: 32px;
+  div,
+  iframe {
+    flex: 1;
+  }
+
+  div {
+    padding: 0 16px;
+
+    p {
+      line-height: 2;
     }
   }
-  .info-inicio {
+}
+
+.headernav {
+  position: relative;
+}
+
+.contact-us-content {
+  display: flex;
+  button,
+  h3,
+  h1{
+    padding: 0 0;
+    margin: 8px 0px;
+  }
+  button, h3{
+    cursor: pointer;
+  }
+  p{
+    margin: 0;
+  }
+  button {
+    background: transparent;
+    border: none;
+  }
+  div {
+    gap: 16px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    img {
-      width: 300px;
-      height: auto;
-    }
-    button {
-      font-family: "Montserrat", sans-serif;
-      padding: 8px 16px;
-      border: none;
-      border-radius: 8px;
-      color: white;
-      cursor: pointer;
-      background-color: var(--main-color);
-  
-      transition: background-color 0.2s ease-in-out;
+    align-items: flex-start;
+    a, h3, button{
+      color: var(--main-color);
+      font-family: "Maven Pro", sans-serif;
+      text-decoration: none;
+      font-size: 1.25em;
+    
     }
   }
-  
-  h1 {
-    font-family: "Maven Pro", sans-serif;
-    color: white;
-    text-align: center;
-    margin-bottom: 16px;
-    color: var(--secondary-color);
+}
+
+dialog {
+  border-radius: 8px;
+  border: none;
+  padding: 32px;
+  gap: 16px;
+  p {
+    margin: 0;
   }
-  
-  #limpieza {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -2;
-    filter: blur(3px);
-  }
-  
-  #our-services-h2 {
+  a {
+    font-size: 1.25em;
+    margin: 16px;
     color: var(--main-color);
     font-family: "Maven Pro", sans-serif;
-    text-align: center;
-    margin-bottom: 32px;
+    text-decoration: none;
   }
-  
-  .fullHeight {
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    padding: 32px 0px;
-    h2 {
-      color: white;
-    }
-    p,
-    q {
-      font-size: 22px;
-      letter-spacing: 1.25px;
-    }
+  button {
+    padding: 12px 36px !important;
   }
-  .space {
-    width: 150px;
-    height: 10px;
-    background-color: var(--secondary-color);
-  }
-  #more-info {
-    height: 100vh;
-    gap: 32px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    h2 {
-      font-family: "Maven Pro", sans-serif;
-      color: var(--main-color);
-      font-size: 1.65em;
-    }
-    ul {
-      padding: 0;
-      margin-bottom: 48px;
-      li {
-        margin: 8px 0px;
-        list-style-type: none;
-        font-family: "Montserrat", sans-serif;
-        font-size: 14px;
-        span {
-          color: var(--main-color);
-        }
-      }
-    }
-  
-    div {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      button {
-        font-family: "Montserrat", sans-serif;
-        padding: 8px 16px;
-        border: none;
-        border-radius: 8px;
-        color: white;
-        background-color: var(--main-color);
-        cursor: pointer;
-        transition: all 0.2s ease-in-out;
-      }
-    }
-  }
-  
-  .services {
-    display: grid;
-    width: 100%;
-    text-align: center;
-    h3 {
-      color: white;
-    }
-  }
-  
-  q {
-    margin: 32px;
-    text-align: center;
-    color: white;
-  }
-  
-  .callus {
-    background-color: var(--main-color);
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  
-  #our-services {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .services-2 {
-  }
-  
-  #our-services {
-    padding: 16px 32px;
-    h2 {
-      color: var(--main-color);
-      font-family: "Maven Pro", sans-serif;
-    }
-  }
-  
-  .services {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    text-align: center;
-    padding: 0 32px;
-    width: calc(100% - 64px);
-    margin-bottom: 32px;
-  
-    div:last-of-type {
-      grid-column: span 2;
-      background-color: var(--main-color);
-      transition: all 0.3s ease-in-out;
-      img:first-of-type {
-        position: absolute;
-        opacity: 1;
-        z-index: 2;
-        width: 100%;
-        height: auto;
-        filter: none;
-      }
-      .invis-two-row {
-        cursor: pointer;
-        opacity: 0;
-        z-index: 1;
-        transition: all 0.3s ease-in-out;
-        display: flex;
-        flex-direction: column;
-        background-color: var(--main-color);
-        button {
-          z-index: 999;
-        }
-        p {
-          position: relative;
-          margin: 0;
-        }
-      }
-      p {
-        color: black;
-      }
-      &:hover {
-        cursor: pointer;
-        background-color: white;
-        img:first-of-type {
-          opacity: 0;
-        }
-        .invis-two-row {
-          opacity: 1;
-          background-color: white;
-        }
-  
-        p {
-          opacity: 1;
-        }
-      }
-    }
-  
-    div {
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      border: none;
-      border-radius: 8px;
-      position: relative;
-      height: 300px;
-      overflow: hidden;
-      perspective: 1000px;
-  
-      h3 {
-        position: absolute;
-        opacity: 1;
-        z-index: 2;
-        transition: opacity 0.4s ease-in-out;
-        color: white;
-      }
-  
-      p {
-        padding: 16px;
-        position: absolute;
-        opacity: 0;
-        z-index: 2;
-        transition: opacity 0.4s ease-in-out;
-        color: white;
-      }
-  
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: all 0.4s ease-in-out;
-        filter: brightness(0.5);
-        z-index: 1;
-      }
-    }
-  }
-  .active-animation {
-    &:not(:last-of-type) {
-      h3 {
-        opacity: 0 !important;
-      }
-      p {
-        opacity: 1 !important;
-      }
-      img {
-        transform: rotateY(180deg);
-        filter: brightness(0.1);
-      }
-    }
-    
-   
-  }
-  
-  #quotes {
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    border-bottom: 5px solid #94e4c4;
-  
-    div:first-of-type {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .quotes-text {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      max-width: calc(100% - 64px);
-      padding-bottom: 32px;
-      p {
-        flex: 1;
-        font-size: 18px;
-        letter-spacing: 1.25px;
-        padding: 0px 16px;
-        line-height: 1.25;
-      }
-    }
-  }
-  html{
-    scroll-behavior: smooth;
-  }
-  
-  .is-intersecting {
-    color: var(--secondary-color);
-  }
-  
-  footer {
-    border-top: 2px solid var(--main-color);
-    background-color: var(--secondary-color);
-    display: flex;
-    justify-content: center;
-    padding: 64px 80px;
-    align-items: center;
-    img {
-      width: auto;
-      height: 100px;
-    }
-    div {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      color: var(--main-color);
-      div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 0px 16px;
-        a {
-          text-decoration: none;
-        }
-      }
-    }
-  }
-  .last-div-footer {
-    svg {
-      width: 24px;
-      height: 24px;
-      fill: var(--main-color);
-    }
-    a {
-      text-decoration: none;
-      color: black;
-      align-items: center;
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-    }
-  }
-  .flex-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  #call-us-final {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 64px;
-    .info {
-      color: #0c3223;
-      font-family: "Maven Pro", sans-serif;
-      font-size: 1.5em;
-    }
-    button {
-      font-family: "Montserrat", sans-serif;
-      padding: 8px 16px;
-      border: none;
-      border-radius: 8px;
-      color: white;
-      background-color: var(--main-color);
-      cursor: pointer;
-      transition: all 0.2s ease-in-out;
-      margin-top: 16px;
-      margin-bottom: 32px;
-    }
-  }
-  
-  .move-up {
-    height: 120px;
+  &::backdrop {
     background-color: #0c3223a2;
   }
-  
-  .move-down {
-    height: 120px;
-  }
-  
-  button {
-    padding: 24px 32px !important;
-    transition: all 0.2s ease-in-out;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    color: white;
-    background-color: var(--main-color);
-    border: 1px solid transparent !important;
-    text-transform: uppercase;
-    font-family: "Maven Pro", sans-serif !important;
-    width: 200px !important;
-    &:hover {
-      color: var(--main-color) !important;
-      background-color: white !important;
-      border: 1px solid var(--main-color) !important;
-    }
-  }
-  
-  #callnow {
-    padding: 64px;
-  }
-  
-  @media screen and (max-width: 1024px) {
-    .services {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    #call-us-final {
-      padding: 32px;
-    }
-  }
-  
-  @media screen and (max-width: 768px) {
-    .services {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    #call-us-final {
-      padding: 16px;
-    }
-    h2,
-    ul {
-      padding: 0px 32px !important;
-    }
-    #limpieza {
-      height: 100%;
-      width: auto;
-      object-fit: cover;
-      transform: translateX(-20%);
-    }
-  }
-  
-  @media screen and (max-width: 500px) {
-    .services {
-      grid-template-columns: repeat(1, 1fr);
-      padding: 0px;
-      width: calc(100%);
-      div {
-        &:last-of-type {
-          grid-column: span 1;
-        }
-      }
-    }
-  }
-  
-  dialog {
-    border-radius: 8px;
-    border: none;
-    padding: 32px;
-    gap: 16px;
-    p {
-      margin: 0;
-    }
-    a {
-      font-size: 1.25em;
-      margin: 16px;
-      color: var(--main-color);
-      font-family: "Maven Pro", sans-serif;
-      text-decoration: none;
-    }
-    button {
-      padding: 12px 36px !important;
-    }
-    &::backdrop {
-      background-color: #0c3223a2;
-    }
-  }
-  
+}
+
+h1{
+  font-size: 2.5em;
+  margin: 0;
+  padding: 0;
+  color: var(--main-color);
+}
