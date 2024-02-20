@@ -8,6 +8,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 nav {
   transition: all 0.2s ease-in-out;
@@ -128,4 +129,47 @@ h1{
   margin: 0;
   padding: 0;
   color: var(--main-color);
+}
+footer {
+  border-top: 1px solid var(--main-color);
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  padding: 64px 80px;
+  align-items: center;
+  img {
+    width: auto;
+    height: 100px;
+  }
+  div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: var(--main-color);
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0px 16px;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+.last-div-footer {
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--main-color);
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
 }
