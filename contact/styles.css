@@ -50,6 +50,9 @@ nav {
 #contact-us-section {
   display: flex;
   padding: 32px;
+  height: calc(100vh - 152px);
+  justify-items: center;
+  align-items: center;
   div,
   iframe {
     flex: 1;

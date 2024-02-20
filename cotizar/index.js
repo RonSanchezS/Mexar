@@ -20,14 +20,9 @@ window.onscroll = function() {
     var currentScrollTop = window.scrollY || document.documentElement.scrollTop;
 
     if (currentScrollTop > lastScrollTop) {
-
         if(!intersectingFlag) {
-        //    document.querySelector(".headernav").classList.add("move-up");
         }
-       
     } else {
-       // document.querySelector(".headernav").classList.remove("move-up", "move-down");
     }
-
     lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
 };
