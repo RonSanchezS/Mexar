@@ -371,45 +371,62 @@ html{
 }
 
 footer {
-  border-top: 1px solid var(--main-color);
-  background-color: var(--secondary-color);
+  background-color: var(--main-color);
   display: flex;
   justify-content: center;
   padding: 64px 80px;
   align-items: center;
+  *, a{
+    color: var(--secondary-color) !important;
+  }
   img {
     width: auto;
     height: 100px;
   }
   div {
     display: flex;
-    justify-content: space-between;
     width: 100%;
     color: var(--main-color);
     div {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      &:not(:first-of-type){
+      justify-content: flex-start;
+      }
       padding: 0px 16px;
+      div{
+        display: flex;
+        flex-direction: column;
+      }
       a {
         text-decoration: none;
       }
     }
   }
 }
-.last-div-footer {
-  svg {
-    width: 24px;
-    height: 24px;
-    fill: var(--main-color);
+.arrogantis-footer{
+  display: flex;
+  flex-direction: column;
+  p{
+    margin: 0;
   }
+  ul{
+    margin-top: 4px;
+    padding-left: 8px;
+    li{
+      list-style: none;
+    }
+  }
+}
+.last-div-footer {
+  p{
+    margin: 0;
+  }
+  margin-top: 16px;
   a {
     text-decoration: none;
     color: black;
     align-items: center;
     display: flex;
-    justify-content: center;
     gap: 8px;
   }
 }
@@ -501,6 +518,34 @@ button {
     object-fit: cover;
     transform: translateX(-20%);
   }
+  footer{
+    div{
+      justify-content: center;
+      align-items: center;
+      img{
+        margin-top: 8px;
+        height: 100px !important;
+        &:first-of-type{
+          height: 100px;
+          width: 150px;
+          object-fit: cover;
+        }
+      }
+      
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 !important;
+    gap: 8px;
+      *{
+        display: flex;
+        justify-content: center;
+        padding: 0;
+      }
+      ul{
+        flex-direction: column;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -538,3 +583,4 @@ dialog {
     background-color: #0c3223a2;
   }
 }
+

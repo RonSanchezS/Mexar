@@ -16,9 +16,12 @@
 
   <body>
     <dialog>
-      <img src="./qrcallme.png" alt="svg">
+      <img src="./qrcallme.png" alt="svg" />
       <p>Feel free to call us and ask all your questions!</p>
-      <a href="mailto:Info@mexar.ca?subject=Quotation about cleaning services&body=Hello, can I get a quotation?">Info@mexar.ca</a>
+      <a
+        href="mailto:Info@mexar.ca?subject=Quotation about cleaning services&body=Hello, can I get a quotation?"
+        >Info@mexar.ca</a
+      >
       <button autofocus id="closeButton">Close</button>
     </dialog>
     <img
@@ -42,7 +45,7 @@
         <img src="./assets/logo.png" alt="Logo de Mexar" />
         <h1>MEXAR Cleaning & Sanitation</h1>
         <a href="./cotizar/cotizar.html">
-            <button>Get a quote</button>
+          <button>Get a quote</button>
         </a>
       </div>
     </section>
@@ -111,78 +114,95 @@
         <div>
           <h3>Building Maintenance</h3>
           <p>
-            Our building services take care of cleaning common areas, carpet vacuuming, regular trash removal, and repairing broken items.
+            Our building services take care of cleaning common areas, carpet
+            vacuuming, regular trash removal, and repairing broken items.
           </p>
           <img src="./assets/manteinance.png" alt="Office" />
         </div>
         <div>
           <h3>Window Cleaning</h3>
           <p>
-            We can perform commercial, residential, and post-construction window cleaning. We clean their interior and exterior.
+            We can perform commercial, residential, and post-construction window
+            cleaning. We clean their interior and exterior.
           </p>
           <img src="./assets/window.png" alt="Office" />
         </div>
         <div>
           <h3>Pressure Washing</h3>
           <p>
-            We remove oil stains, paint, and dirt in general. Pressure washing will prevent premature aging of the floor.<br>
-Regular Pressure washing maintains the life of your floors.
+            We remove oil stains, paint, and dirt in general. Pressure washing
+            will prevent premature aging of the floor.<br />
+            Regular Pressure washing maintains the life of your floors.
           </p>
           <img src="./assets/pressure.png" alt="Office" />
         </div>
         <div>
           <h3>Carpet Cleaning</h3>
           <p>
-            We offer to remove stains, dirt, and allergens from carpets. Common methods include hot water extraction, dry cleaning, and vacuuming.
+            We offer to remove stains, dirt, and allergens from carpets. Common
+            methods include hot water extraction, dry cleaning, and vacuuming.
           </p>
           <img src="./assets/carpet.png" alt="Office" />
         </div>
         <div>
           <h3>Floor Care</h3>
-          <p>Our commercial and residential floor cleaning and stripping services allow us to remove old coatings and apply a brand-new coat of protective wax. We can clean and treat everything from concrete floors to warehouse flooring.</p>
+          <p>
+            Our commercial and residential floor cleaning and stripping services
+            allow us to remove old coatings and apply a brand-new coat of
+            protective wax. We can clean and treat everything from concrete
+            floors to warehouse flooring.
+          </p>
           <img src="./assets/floor.png" alt="Office" />
         </div>
         <div>
           <h3>Maid Services</h3>
           <p>
-            We offer a unique cleaning service where work surfaces and common and living spaces can be enjoyed by its occupants.
+            We offer a unique cleaning service where work surfaces and common
+            and living spaces can be enjoyed by its occupants.
           </p>
           <img src="./assets/maid.png" alt="Office" />
         </div>
         <div>
           <h3>Snow Removal</h3>
-          <p>Our snow removal service includes removing snow from sidewalks, parking lots and common areas. We know how hard that job can be, leave it to us!!</p>
+          <p>
+            Our snow removal service includes removing snow from sidewalks,
+            parking lots and common areas. We know how hard that job can be,
+            leave it to us!!
+          </p>
           <img src="./assets/snow.png" alt="Office" />
         </div>
         <div>
           <h3>Sanitation</h3>
-          <p>Our sanitation service eliminates viruses and other biological agents in the air and on any surfaces within the area that's being treated. Widely used in childcare centers, schools, and offices.</p>
+          <p>
+            Our sanitation service eliminates viruses and other biological
+            agents in the air and on any surfaces within the area that's being
+            treated. Widely used in childcare centers, schools, and offices.
+          </p>
           <img src="./assets/sanitation.jpg" alt="Office" />
         </div>
-        <div  onclick="callButtonClick()">
+        <div onclick="callButtonClick()">
           <img src="./assets/logo_horizontal.png" alt="Mexar" />
-          <div class="invis-two-row" >
+          <div class="invis-two-row">
             <p class="info">250.609.7987</p>
             <p class="info">info@mexar.ca</p>
             <button onclick="callButtonClick()">Call us today!</button>
           </div>
-         
         </div>
       </div>
       <script>
-      const serviceDivs = document.querySelectorAll('.services > div');
-    
-      serviceDivs.forEach(img => {
-            img.addEventListener('click', () => {
-                img.classList.toggle('active-animation');
-                console.log('Se hizo clic en la imagen');
-            });
-            // img.addEventListener('mouseleave', () => {
-            //     img.classList.remove('active-animation');
-            // });
+        const serviceDivs = document.querySelectorAll(".services > div");
+
+        serviceDivs.forEach((img) => {
+          img.addEventListener("click", () => {
+            img.classList.toggle("active-animation");
+            console.log("Se hizo clic en la imagen");
+          });
+          // img.addEventListener('mouseleave', () => {
+          //     img.classList.remove('active-animation');
+          // });
         });
-    </script>
-      
+      </script>
+
       <div class="space"></div>
     </section>
 
@@ -223,15 +243,17 @@ Regular Pressure washing maintains the life of your floors.
     </section> -->
 
     <footer>
-      <img src="./assets/logo.png" alt="Logo de Mexar" />
       <div>
         <div>
-          <p>
-            Mexar<br />
-            2178 Salisbury Ave<br />
-            Port Coquitlam, BC<br />
-            V3B 1Y1
-          </p>
+          <img src="./assets/logo.png" alt="Logo de Mexar" />
+        </div>
+        <div class="arrogantis-footer">
+          <p>Mexar</p>
+          <ul>
+            <li>2178 Salisbury Ave</li>
+            <li>Port Coquitlam, BC</li>
+            <li>V3B 1Y1</li>
+          </ul>
         </div>
         <!-- <div>
           <p>
@@ -240,25 +262,29 @@ Regular Pressure washing maintains the life of your floors.
             Sunday: Closed
           </p>
         </div> -->
-        
+
         <div class="last-div-footer">
-          <div class="flex-row"> 
+          <div>
             <p>Call us: 250 609 7987</p>
-            <a href="https://www.instagram.com/mexar.cleaning/"><span>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
-            </span>mexar.cleaning</a>
+            <a
+              href="mailto:Info@mexar.ca?subject=Quotation about cleaning services&body=Hello, can I get a quotation?"
+              >Info@mexar.ca</a
+            >
+            <p>www.mexar.ca</p>
+          </div>       
+        </div>
+        <div class="last-div-footer">
+          <div>
+            <a href="https://www.instagram.com/mexar.cleaning/"
+              ><span> </span>mexar.cleaning</a
+            >
+            <a href="https://www.facebook.com/profile.php?id=100091984702588"
+              ><span> </span>mexar.cleaning</a
+            >
           </div>
-          <div class="flex-row">
-            <a href="mailto:Info@mexar.ca?subject=Quotation about cleaning services&body=Hello, can I get a quotation?">Info@mexar.ca</a>
-            <a href="https://www.facebook.com/profile.php?id=100091984702588"><span>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg>
-            </span>mexar.cleaning</a>
-          </div>
-          <p>www.mexar.ca</p>
         </div>
         <div>
-          <img src="./assets/ecofriendly.png" alt="Logo de eco-friendly" />
-
+          <img src="./assets/EcoFriendly.svg" alt="Logo de eco-friendly" />
         </div>
       </div>
     </footer>
