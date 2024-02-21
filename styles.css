@@ -462,7 +462,6 @@ footer {
 
 .move-up {
   height: 120px;
-  background-color: #0c3223a2;
 }
 
 .move-down {
@@ -502,6 +501,20 @@ button {
 }
 
 @media screen and (max-width: 768px) {
+  .headernav{
+    img{
+      height: 70px;
+    }
+    ul{
+      margin: 0;
+    }
+    a{
+      display: flex;
+      justify-content: center;
+    }
+    padding-bottom: 16px;
+    flex-direction: column;
+  }
   .services {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -584,3 +597,11 @@ dialog {
   }
 }
 
+
+.last-div-footer{
+  svg{
+    width: 24px;
+    height: 24px;
+    fill: var(--secondary-color);
+  }
+}

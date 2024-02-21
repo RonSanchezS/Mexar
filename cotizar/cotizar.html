@@ -1,192 +1,406 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mexar Cleaning & Sanitation Cotization</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+  </head>
+  <body>
     <nav class="headernav">
-        <img src="../assets/logo_sf2.png" alt="Logo de Mexar" />
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Quote Request</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    <form id="form-cotizacion">
-        <div class="upper-form">
-            <div class="left-upper-form ">
-                <div>
-                    <h3>Type of cleaning required</h3>
-                    <label>
-                        <input type="radio" name="cleaningType" value="One-time" required> One-time
-                    </label>
-                    <label>
-                        <input type="radio" name="cleaningType" value="RegularMaintenance"> Regular Maintenance
-                    </label>
-                    <label>
-                        <input type="radio" name="cleaningType" value="MoveInOut"> Move in | Move out
-                    </label>
-                    <label>
-                        <input type="radio" name="cleaningType" value="VacationRental"> Vacation Rental
-                    </label>
-                    <label>
-                        <input type="radio" name="cleaningType" value="PostContinuation"> Post Continuation
-                    </label>
-                    <label>
-                        <input type="radio" name="cleaningType" value="DeepCleaning"> Deep cleaning
-                    </label>
-                </div>
-                <div>
-                    <h3>Regular clean frequency</h3>
-                    <label>
-                        <input type="radio" name="cleanFrequency" value="OnlyOnce" required> Only once
-                    </label>
-                    <label>
-                        <input type="radio" name="cleanFrequency" value="Weekly"> Weekly
-                    </label>
-                    <label>
-                        <input type="radio" name="cleanFrequency" value="BiWeekly"> Bi-weekly
-                    </label>
-                    <label>
-                        <input type="radio" name="cleanFrequency" value="Every3Weeks"> Every 3 weeks
-                    </label>
-                    <label>
-                        <input type="radio" name="cleanFrequency" value="Every5Weeks"> Every 5 weeks
-                    </label>
-                    <label>
-                        <input type="radio" name="cleanFrequency" value="ToBeDefined"> To be defined
-                    </label>
-                </div>
-            </div>
-            <div class="right-upper-form">
-                <h3>Type of cleaning place</h3>
-                <div class="inner-right-upper-form">
-                    <div>
-                        <label>
-                            <input type="radio" name="cleaningPlace" value="Houses" required> Houses
-                        </label>
-                        <label>
-                            <input type="radio" name="cleaningPlace" value="Condominiums"> Condominiums
-                        </label>
-                        <label>
-                            <input type="radio" name="cleaningPlace" value="Townhouses"> Townhouses
-                        </label>
-                        <label>
-                            <input type="radio" name="cleaningPlace" value="Apartments"> Apartments
-                        </label>
-                    </div>
-                    
-                    <div>
-                        <label>
-                            <input type="radio" name="cleaningPlace" value="Schools"> Schools
-                        </label>
-                        <label>
-                            <input type="radio" name="cleaningPlace" value="DayCare"> Day Care
-                        </label>
-                        <label>
-                            <input type="radio" name="cleaningPlace" value="Churches"> Churches
-                        </label>
-                        <label>
-                            <input type="radio" name="cleaningPlace" value="ConstructionSites"> Construction sites
-                        </label>
-                        <label>
-                            <input type="radio" name="cleaningPlace" value="SiteOffices"> Site offices
-                        </label>
-                        <label>
-                            <input type="radio" name="cleaningPlace" value="Warehouses"> Warehouses
-                        </label>
-                        <label>
-                            <input type="radio" name="cleaningPlace" value="Offices"> Offices
-                        </label>
-                        <label>
-                            <input type="radio" name="cleaningPlace" value="Buildings"> Buildings
-                        </label>
-                    </div>
-                </div>
-            </div>
+        <a href="../index.html">
+      <img src="../assets/logo_sf2.png" alt="Logo de Mexar" />
+        </a>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#more-info" class="about">About</a></li>
+        <li>
+          <a href="../index.html#call-us-final" class="services-a">Services</a>
+        </li>
+        <li><a href="#">Quote Request</a></li>
+        <li><a href="../contact/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <form id="form-cotizacion" onsubmit="return false">
+      <div class="upper-form">
+        <div class="left-upper-form">
+          <div>
+            <h3>Type of cleaning required</h3>
+            <label>
+              <input
+                type="radio"
+                name="cleaningType"
+                value="One-time"
+                required
+              />
+              One-time
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="cleaningType"
+                value="Regular Maintenance"
+              />
+              Regular Maintenance
+            </label>
+            <label>
+              <input type="radio" name="cleaningType" value="Move In Out" /> Move
+              in | Move out
+            </label>
+            <label>
+              <input type="radio" name="cleaningType" value="Vacation Rental" />
+              Vacation Rental
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="cleaningType"
+                value="Post Continuation"
+              />
+              Post Continuation
+            </label>
+            <label>
+              <input type="radio" name="cleaningType" value="Deep Cleaning" />
+              Deep cleaning
+            </label>
+          </div>
+          <div>
+            <h3>Regular clean frequency</h3>
+            <label>
+              <input
+                type="radio"
+                name="cleanFrequency"
+                value="Only Once"
+                required
+              />
+              Only once
+            </label>
+            <label>
+              <input type="radio" name="cleanFrequency" value="Weekly" /> Weekly
+            </label>
+            <label>
+              <input type="radio" name="cleanFrequency" value="Bi-Weekly" />
+              Bi-weekly
+            </label>
+            <label>
+              <input type="radio" name="cleanFrequency" value="Every 3 Weeks" />
+              Every 3 weeks
+            </label>
+            <label>
+              <input type="radio" name="cleanFrequency" value="Every 5 Weeks" />
+              Every 5 weeks
+            </label>
+            <label>
+              <input type="radio" name="cleanFrequency" value="To Be Defined" />
+              To be defined
+            </label>
+          </div>
         </div>
-        <div class="lower-form">
-            <div class="left-lower-form">
-                <h3>What type of service are you requiring</h3>
-               <div>
-                <div>
-                    <label>
-                        <input type="radio" name="serviceType" value="WindowCleaning" required> Window cleaning
-                    </label>
-                    <label>
-                        <input type="radio" name="serviceType" value="PressureWasher"> Pressure washer
-                    </label>
-                    <label>
-                        <input type="radio" name="serviceType" value="CarpetCleaning"> Carpet cleaning
-                    </label>
-                    <label>
-                        <input type="radio" name="serviceType" value="FloorCare"> Floor care
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        <input type="radio" name="serviceType" value="MaidServices"> Maid services
-                    </label>
-                    <label>
-                        <input type="radio" name="serviceType" value="SnowRemoval"> Snow removal
-                    </label>
-                    <label>
-                        <input type="radio" name="serviceType" value="Sanitations"> Sanitations
-                    </label>
-                    <label>
-                        <input type="radio" name="serviceType" value="Other"> Other
-                    </label>
-                </div>
-               </div>
+        <div class="right-upper-form">
+          <h3>Type of cleaning place</h3>
+          <div class="inner-right-upper-form">
+            <div>
+              <label>
+                <input
+                  type="radio"
+                  name="cleaningPlace"
+                  value="Houses"
+                  required
+                />
+                Houses
+              </label>
+              <label>
+                <input type="radio" name="cleaningPlace" value="Condominiums" />
+                Condominiums
+              </label>
+              <label>
+                <input type="radio" name="cleaningPlace" value="Townhouses" />
+                Townhouses
+              </label>
+              <label>
+                <input type="radio" name="cleaningPlace" value="Apartments" />
+                Apartments
+              </label>
             </div>
-            <div class="right-lower-form">
-                <h3>First name and email</h3>
-                <div>
-                    <div>
-                        <p>Contact name:</p>
-                        <p>Tel. Optional</p>
-                    </div>
-                    <div>
-                        <input type="text" id="contactName" name="contactName" placeholder="John Smith" required>
-                        <input type="tel" id="tel" name="tel" placeholder="403 7795">
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <p>Email:</p>
-                        <p>Zip code:</p>
-                    </div>
-                    <div>
-                        <input type="email" id="email" name="email" placeholder="John@example.com" required>
-                        <input type="text" id="zipCode" name="zipCode" placeholder="T2A 0A1" required>
-                    </div>
-                </div>
+
+            <div>
+              <label>
+                <input type="radio" name="cleaningPlace" value="Schools" />
+                Schools
+              </label>
+              <label>
+                <input type="radio" name="cleaningPlace" value="DayCare" /> Day
+                Care
+              </label>
+              <label>
+                <input type="radio" name="cleaningPlace" value="Churches" />
+                Churches
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="cleaningPlace"
+                  value="Construction Sites"
+                />
+                Construction sites
+              </label>
+              <label>
+                <input type="radio" name="cleaningPlace" value="Site Offices" />
+                Site offices
+              </label>
+              <label>
+                <input type="radio" name="cleaningPlace" value="Warehouses" />
+                Warehouses
+              </label>
+              <label>
+                <input type="radio" name="cleaningPlace" value="Offices" />
+                Offices
+              </label>
+              <label>
+                <input type="radio" name="cleaningPlace" value="Buildings" />
+                Buildings
+              </label>
             </div>
+          </div>
         </div>
-        <div class="goAhead">
-        <button style="background-color: gray;">Go ahead!</button>
+      </div>
+      <div class="lower-form">
+        <div class="left-lower-form">
+          <h3>What type of service are you requiring</h3>
+          <div>
+            <div>
+              <label>
+                <input
+                  type="radio"
+                  name="serviceType"
+                  value="Window Cleaning"
+                  required
+                />
+                Window cleaning
+              </label>
+              <label>
+                <input type="radio" name="serviceType" value="Pressure Washer" />
+                Pressure washer
+              </label>
+              <label>
+                <input type="radio" name="serviceType" value="Carpet Cleaning" />
+                Carpet cleaning
+              </label>
+              <label>
+                <input type="radio" name="serviceType" value="Floor Care" />
+                Floor care
+              </label>
+            </div>
+            <div>
+              <label>
+                <input type="radio" name="serviceType" value="Maid Services" />
+                Maid services
+              </label>
+              <label>
+                <input type="radio" name="serviceType" value="Snow Removal" />
+                Snow removal
+              </label>
+              <label>
+                <input type="radio" name="serviceType" value="Sanitations" />
+                Sanitations
+              </label>
+              <label>
+                <input type="radio" name="serviceType" value="Other" /> Other
+              </label>
+            </div>
+          </div>
         </div>
+        <div class="right-lower-form">
+          <h3>First name and email</h3>
+          <div>
+            <div>
+              <p>Contact name:</p>
+              <p>Tel. Optional</p>
+            </div>
+            <div>
+              <input
+                type="text"
+                id="contactName"
+                name="contactName"
+                placeholder="John Smith"
+                required
+              />
+              <input type="tel" id="tel" name="tel" placeholder="403 7795" />
+            </div>
+          </div>
+          <div>
+            <div>
+              <p>Email:</p>
+              <p>Zip code:</p>
+            </div>
+            <div>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="John@example.com"
+                required
+              />
+              <input
+                type="text"
+                id="zipCode"
+                name="zipCode"
+                placeholder="T2A 0A1"
+                required
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="goAhead">
+        <button style="background-color: gray">Go ahead!</button>
+      </div>
     </form>
     <script>
-        const form = document.getElementById('form-cotizacion');
-        const submitButton = document.querySelector('.goAhead button');
-        
-        form.addEventListener('change', function() {
-            if (form.checkValidity()) {
-                submitButton.disabled = false;
-                submitButton.style.backgroundColor = ''; // Restaurar el color de fondo predeterminado
-            } else {
-                submitButton.disabled = true;
-                submitButton.style.backgroundColor = 'gray'; // Cambiar el color de fondo a gris
+
+            function sendMessage() {
+              if (!form.checkValidity()) {
+                return;
+              }
+              const contactName = document.getElementById("contactName").value;
+              const tel = document.getElementById("tel").value;
+              const email = document.getElementById("email").value;
+              const zipCode = document.getElementById("zipCode").value;
+
+              const cleaningType = document.querySelector(
+                'input[name="cleaningType"]:checked'
+              ).value;
+              const cleanFrequency = document.querySelector(
+                'input[name="cleanFrequency"]:checked'
+              ).value;
+              const cleaningPlace = document.querySelector(
+                'input[name="cleaningPlace"]:checked'
+              ).value;
+              const serviceType = document.querySelector(
+                'input[name="serviceType"]:checked'
+              ).value;
+
+              const message = `Contact name: ${contactName} \nTel: ${tel} \nEmail: ${email} \nZip code: ${zipCode} \nCleaning type: ${cleaningType} \nClean frequency: ${cleanFrequency} \nCleaning place: ${cleaningPlace} \nService type: ${serviceType}`;
+              console.log(message);
+              const requestMessage = `
+        Hello!
+
+        My name is ${contactName} and I'm interested in hiring cleaning services.
+
+        Here are my contact details:
+        Phone: ${tel ?? "Not provided"}
+        Email: ${email}
+        Zip Code: ${zipCode}
+
+        Service Details:
+        - Type of cleaning required: ${cleaningType}
+        - Desired cleaning frequency: ${cleanFrequency}
+        - Place to be cleaned: ${cleaningPlace}
+        - Required service type: ${serviceType}
+
+        Looking forward to your prompt response!
+      `;
+
+              emailjs.send("service_cb4pwdj", "template_dt3fzix", {
+                from_name: contactName,
+                to_name: "info@mexar.ca",
+                message: requestMessage,
+              }).then(
+                function (response) {
+                  console.log("SUCCESS!", response.status, response.text);
+                  if(response.status === 200) {
+                    alert("Your message has been sent successfully!");
+                    form.reset();
+                  }
+                  else {
+                    alert("There was an error sending your message. Please try again later.");
+                  }
+                },
+                function (error) {
+                  console.log("FAILED...", error);
+                }
+              );
             }
-        });
+
+            function completeForm(e) {
+              e.preventDefault();
+              console.log("Form completed");
+            }
+
+              (function () {
+                emailjs.init("fkGQp3B8jijI_tJ71");
+              })();
+
+            const form = document.getElementById("form-cotizacion");
+            function handleForm(event) {
+              event.preventDefault();
+            }
+            form.addEventListener("submit", sendMessage);
+            const submitButton = document.querySelector(".goAhead button");
+
+            form.addEventListener("change", function () {
+              if (form.checkValidity()) {
+                submitButton.disabled = false;
+                submitButton.style.backgroundColor = ""; // Restaurar el color de fondo predeterminado
+              } else {
+                submitButton.disabled = true;
+                submitButton.style.backgroundColor = "gray"; // Cambiar el color de fondo a gris
+              }
+            });
     </script>
-    
-</body>
+    <footer>
+      <div>
+        <div>
+          <img src="../assets/logo.png" alt="Logo de Mexar" />
+        </div>
+        <div class="arrogantis-footer">
+          <p>Mexar</p>
+          <ul>
+            <li>2178 Salisbury Ave</li>
+            <li>Port Coquitlam, BC</li>
+            <li>V3B 1Y1</li>
+          </ul>
+        </div>
+        <!-- <div>
+            <p>
+              Monday to Friday: 8 AM – 4 PM <br />
+              Saturday: 8 AM – 12 PM <br />
+              Sunday: Closed
+            </p>
+          </div> -->
+
+        <div class="last-div-footer">
+          <div>
+            <p>Call us: 250 609 7987</p>
+            <a
+              href="mailto:Info@mexar.ca?subject=Quotation about cleaning services&body=Hello, can I get a quotation?"
+              >Info@mexar.ca</a
+            >
+            <p>www.mexar.ca</p>
+          </div>
+        </div>
+        <div class="last-div-footer">
+          <div>
+            <a href="https://www.instagram.com/mexar.cleaning/"
+              ><span> </span>mexar.cleaning</a
+            >
+            <a href="https://www.facebook.com/profile.php?id=100091984702588"
+              ><span> </span>mexar.cleaning</a
+            >
+          </div>
+        </div>
+        <div>
+          <img src="../assets/EcoFriendly.svg" alt="Logo de eco-friendly" />
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
