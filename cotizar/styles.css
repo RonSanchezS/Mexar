@@ -162,13 +162,27 @@ nav {
     }
    }
   }
+  .last-div-footer{
+    svg{
+      width: 24px;
+      height: 24px;
+      fill: var(--secondary-color);
+    }
+  }
   @media screen and (max-width : 768px){
     .headernav{
+      padding: 8px;
+      width: calc(100% - 16px) !important;
       img{
         height: 70px;
       }
       ul{
         margin: 0;
+        gap: 8px;
+        padding: 0px 8px !important;
+        li{
+          text-align: center;
+        }
       }
       a{
         display: flex;
